@@ -1,0 +1,9 @@
+| Members | CREATE TABLE `Members` (
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `CreatedDate` datetime DEFAULT NULL,
+  `Name` varchar(50) DEFAULT NULL,
+  `ParentId` int DEFAULT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `ParentId` (`ParentId`),
+  CONSTRAINT `Members_ibfk_1` FOREIGN KEY (`ParentId`) REFERENCES `Members` (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
